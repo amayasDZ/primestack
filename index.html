@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Primestack — Agence Digitale en Algérie | Sites Web, SEO, Ads</title>
+  <meta name="description" content="Primestack est une agence digitale en Algérie. Création de sites web, SEO, publicité (Ads), maintenance & développement d'applications. Demandez un devis gratuit." />
+  <meta name="theme-color" content="#0b0f17" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Primestack — Agence Digitale en Algérie" />
+  <meta property="og:description" content="Sites web, SEO, Ads, maintenance & apps. Devis gratuit." />
+  <meta property="og:type" content="website" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --panel:#0f1624;
+      --panel2:#0c1321;
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.72);
+      --muted2:rgba(234,240,255,.55);
+      --border:rgba(234,240,255,.12);
+      --accent:#7c5cff;
+      --accent2:#2de3a6;
+      --shadow: 0 18px 40px rgba(0,0,0,.45);
+      --radius:18px;
+      --radius2:26px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 700px at 10% 5%, rgba(124,92,255,.18), transparent 55%),
+        radial-gradient(1000px 600px at 85% 20%, rgba(45,227,166,.12), transparent 50%),
+        radial-gradient(800px 600px at 50% 105%, rgba(124,92,255,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      font-family: Inter, Cairo, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.5;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+    /* Top bar (marquee) */
+    .topbar{
+      position:sticky; top:0; z-index:60;
+      background: rgba(10, 14, 22, .72);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; gap:14px;
+      padding:10px 0;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background: rgba(255,255,255,.04);
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    .dot{
+      width:8px;height:8px;border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(124,92,255,.18);
+    }
+    .marquee{
+      flex:1;
+      overflow:hidden;
+      border-left:1px solid var(--border);
+      padding-left:14px;
+    }
+    .marquee-track{
+      display:flex; gap:26px;
+      width:max-content;
+      animation: scroll 18s linear infinite;
+      color:rgba(234,240,255,.78);
+      font-size:13px;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    .marquee-track span b{color:var(--text)}
+    @keyframes scroll{
+      from{ transform: translateX(0); }
+      to{ transform: translateX(-50%); }
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:48px; z-index:55;
+      background: rgba(11,15,23,.62);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 210px;
+    }
+    .logo{
+      width:42px; height:42px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(45,227,166,.85));
+      box-shadow: 0 18px 40px rgba(124,92,255,.18);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), transparent 45%);
+      transform: rotate(18deg);
+    }
+    .brand-title{
+      display:flex; flex-direction:column; line-height:1.1;
+    }
+    .brand-title strong{font-size:14px; letter-spacing:.4px}
+    .brand-title span{font-size:12px; color:var(--muted2)}
+    .links{
+      display:flex; align-items:center; gap:18px;
+    }
+    .links a{
+      font-size:13px; color:var(--muted);
+      padding:10px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+      transition:.2s;
+    }
+    .links a:hover{
+      color:var(--text);
+      border-color:var(--border);
+      background: rgba(255,255,255,.04);
+    }
+    .cta{
+      display:flex; align-items:center; gap:10px;
+      min-width: 210px;
+      justify-content:flex-end;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:600;
+      font-size:13px;
+      transition:.2s;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.07); }
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--accent), rgba(124,92,255,.65));
+      box-shadow: 0 18px 40px rgba(124,92,255,.20);
+    }
+    .btn.primary:hover{ filter: brightness(1.05); }
+    .btn.ghost{
+      background: transparent;
+    }
+    .hamburger{
+      display:none;
+      width:44px;height:44px;border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      cursor:pointer;
+    }
+    .hamburger svg{width:22px;height:22px}
+    .mobile-panel{
+      display:none;
+      border-top:1px solid var(--border);
+      padding:12px 0 18px;
+    }
+    .mobile-panel a{
+      display:block;
+      padding:12px 10px;
+      border-radius:14px;
+      color:var(--muted);
+      border:1px solid transparent;
+    }
+    .mobile-panel a:hover{
+      color:var(--text);
+      border-color:var(--border);
+      background: rgba(255,255,255,.04);
+    }
+
+    /* Hero */
+    .hero{
+      padding:54px 0 22px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:26px;
+      align-items:stretch;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid var(--border);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+    }
+    .hero-main{
+      padding:34px;
+      position:relative;
+      overflow:hidden;
+    }
+    .glow{
+      position:absolute; inset:-20%;
+      background:
+        radial-gradient(500px 320px at 20% 25%, rgba(124,92,255,.28), transparent 60%),
+        radial-gradient(500px 320px at 65% 45%, rgba(45,227,166,.18), transparent 60%);
+      filter: blur(10px);
+      opacity:.9;
+      pointer-events:none;
+    }
+    .hero-main > *{position:relative}
+    .kicker{
+      display:flex; flex-wrap:wrap; align-items:center; gap:10px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .kicker .tag{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+    }
+    h1{
+      margin:16px 0 10px;
+      font-size:52px;
+      letter-spacing:-1.2px;
+      line-height:1.02;
+    }
+    .subtitle{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:15px;
+      max-width: 60ch;
+    }
+    .hero-actions{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .mini{
+      margin-top:18px;
+      display:flex; gap:18px; flex-wrap:wrap;
+      color:var(--muted2);
+      font-size:12px;
+    }
+    .mini b{color:var(--text)}
+    .hero-side{
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    .side-box{
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.12);
+    }
+    .side-title{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px;
+      margin-bottom: 8px;
+    }
+    .side-title strong{font-size:13px}
+    .side-title span{font-size:12px;color:var(--muted2)}
+    .list{
+      display:grid;
+      gap:10px;
+      margin-top: 10px;
+    }
+    .li{
+      display:flex; gap:10px; align-items:flex-start;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .check{
+      width:18px;height:18px; border-radius:6px;
+      background: rgba(45,227,166,.14);
+      border:1px solid rgba(45,227,166,.35);
+      display:inline-flex; align-items:center; justify-content:center;
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .check svg{width:12px;height:12px}
+
+    /* Section base */
+    section{padding:44px 0}
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:18px;
+      margin-bottom: 18px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size:28px;
+      letter-spacing:-.6px;
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      max-width: 62ch;
+      font-size:14px;
+    }
+
+    /* Marquee "scroll to explore" */
+    .explore{
+      margin-top: 18px;
+      border-radius: var(--radius2);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      overflow:hidden;
+    }
+    .explore .track{
+      display:flex; gap:28px;
+      padding:12px 0;
+      width:max-content;
+      animation: scroll 16s linear infinite;
+      color:rgba(234,240,255,.75);
+      font-weight:600;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      font-size:12px;
+    }
+    .explore .chip{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:0 18px;
+    }
+    .spark{
+      width:10px;height:10px;border-radius:999px;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      box-shadow: 0 0 0 4px rgba(45,227,166,.12);
+    }
+
+    /* Stats */
+    .stats{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+    }
+    .stat{
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+    }
+    .stat strong{
+      display:block;
+      font-size:22px;
+      letter-spacing:-.4px;
+    }
+    .stat span{color:var(--muted); font-size:13px}
+
+    /* Services */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .service{
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      transition: .2s;
+      position:relative;
+      overflow:hidden;
+    }
+    .service:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,.05);
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 10px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.10);
+      color: var(--muted);
+      font-size:12px;
+      margin-bottom: 10px;
+    }
+    .service h3{
+      margin:0 0 8px;
+      font-size:16px;
+      letter-spacing:-.2px;
+    }
+    .service p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .service .more{
+      margin-top: 14px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color: rgba(234,240,255,.85);
+      font-weight:700;
+      font-size:12px;
+    }
+    .arrow{
+      width:18px;height:18px;border-radius:999px;
+      border:1px solid var(--border);
+      display:inline-flex;align-items:center;justify-content:center;
+      background: rgba(255,255,255,.03);
+    }
+    .arrow svg{width:12px;height:12px}
+
+    /* Work */
+    .work{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .work-item{
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      background:
+        radial-gradient(450px 250px at 20% 30%, rgba(124,92,255,.20), transparent 60%),
+        rgba(255,255,255,.03);
+      transition:.2s;
+      min-height: 150px;
+      display:flex; flex-direction:column; justify-content:space-between;
+    }
+    .work-item:hover{ transform: translateY(-2px); background: rgba(255,255,255,.05); }
+    .work-item strong{font-size:14px}
+    .work-item span{color:var(--muted); font-size:13px; display:block; margin-top:6px}
+    .work-item .meta{
+      margin-top: 14px;
+      display:flex; justify-content:space-between; align-items:center;
+      color:var(--muted2);
+      font-size:12px;
+    }
+
+    /* Tech */
+    .tech{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      padding:18px;
+      border:1px solid var(--border);
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.03);
+    }
+    .chip2{
+      padding:10px 12px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.12);
+      color: rgba(234,240,255,.85);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    /* Contact */
+    .contact{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .contact-card{
+      padding:20px;
+      border-radius: var(--radius2);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+    }
+    .contact-card h3{margin:0 0 10px; font-size:18px}
+    .contact-card p{margin:0 0 14px; color:var(--muted); font-size:13px}
+    .info{
+      display:grid; gap:10px;
+      margin-top: 10px;
+    }
+    .info a, .info div{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.10);
+      color: rgba(234,240,255,.85);
+      font-size:13px;
+    }
+    .ico{
+      width:34px;height:34px;border-radius:12px;
+      border:1px solid var(--border);
+      display:inline-flex;align-items:center;justify-content:center;
+      background: rgba(255,255,255,.03);
+      flex:0 0 auto;
+    }
+    .ico svg{width:16px;height:16px}
+    form{display:grid; gap:10px}
+    .row{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.14);
+      color: var(--text);
+      outline:none;
+      font-size:13px;
+    }
+    input::placeholder, textarea::placeholder{color:rgba(234,240,255,.45)}
+    textarea{min-height: 120px; resize: vertical}
+    .form-actions{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      margin-top: 4px;
+    }
+    .note{color:var(--muted2); font-size:12px}
+
+    /* Footer */
+    footer{
+      padding:28px 0 38px;
+      color:var(--muted2);
+      border-top:1px solid var(--border);
+      margin-top: 30px;
+    }
+    .foot{
+      display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      align-items:center;
+    }
+    .foot a{color:rgba(234,240,255,.7)}
+    .foot a:hover{color:var(--text)}
+    .sep{opacity:.5; padding:0 8px}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      h1{font-size:44px}
+      .hero-grid{grid-template-columns: 1fr}
+      .cta{justify-content:flex-start; min-width:unset}
+      .links{display:none}
+      .hamburger{display:inline-flex; align-items:center; justify-content:center}
+      .mobile-panel{display:none}
+      .stats{grid-template-columns: repeat(2, 1fr)}
+      .grid{grid-template-columns: repeat(2, 1fr)}
+      .work{grid-template-columns: repeat(2, 1fr)}
+      .contact{grid-template-columns: 1fr}
+    }
+    @media (max-width: 560px){
+      h1{font-size:38px}
+      .hero-main{padding:22px}
+      .grid{grid-template-columns: 1fr}
+      .work{grid-template-columns: 1fr}
+      .row{grid-template-columns: 1fr}
+      .brand{min-width:unset}
+    }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Primestack",
+    "url": "https://example.com",
+    "description": "Agence digitale en Algérie : création de sites web, SEO, Ads, maintenance et développement d'applications.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Alger",
+      "addressCountry": "DZ"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar" aria-label="Top bar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="pill" title="Offre limitée">
+          <span class="dot" aria-hidden="true"></span>
+          <span><b>OFFRE LIMITÉE</b> · Devis gratuit</span>
+        </div>
+
+        <div class="pill" id="countdownPill" title="Compte à rebours">
+          <span>Fin dans :</span>
+          <b id="countdown">15:00</b>
+        </div>
+
+        <div class="marquee" aria-label="Marquee">
+          <div class="marquee-track" id="marqueeTrack">
+            <span>🚀 <b>Primestack</b> — Sites Web · SEO · Ads · Apps · Maintenance</span>
+            <span>💬 Parlez à <b>Mayas</b> — réponse rapide & devis clair</span>
+            <span>📍 Agence en <b>Algérie</b> — accompagnement local + standards internationaux</span>
+
+            <!-- duplicated for seamless scroll -->
+            <span>🚀 <b>Primestack</b> — Sites Web · SEO · Ads · Apps · Maintenance</span>
+            <span>💬 Parlez à <b>Mayas</b> — réponse rapide & devis clair</span>
+            <span>📍 Agence en <b>Algérie</b> — accompagnement local + standards internationaux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#home" aria-label="Primestack home">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-title">
+            <strong>Primestack</strong>
+            <span>Agence Digitale · Algérie</span>
+          </div>
+        </a>
+
+        <nav class="links" aria-label="Navigation">
+          <a href="#services">Services</a>
+          <a href="#realisations">Réalisations</a>
+          <a href="#technologies">Technologies</a>
+          <a href="#contact">Devis</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn ghost" href="#realisations" title="Voir nos réalisations">Voir projets</a>
+          <a class="btn primary" href="#contact" title="Demander un devis">Demandez un devis</a>
+
+          <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu mobile" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-panel" id="mobilePanel" aria-label="Menu mobile">
+        <a href="#services">Services</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#contact">Demandez un devis</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="card hero-main">
+          <div class="glow" aria-hidden="true"></div>
+
+          <div class="kicker">
+            <span class="tag">Bâtisseurs du digital</span>
+            <span class="tag">Basée en Algérie</span>
+            <span class="tag">Sites · SEO · Ads · Apps</span>
+          </div>
+
+          <h1>
+            Agence digitale<br/>
+            en Algérie
+          </h1>
+
+          <p class="subtitle">
+            Primestack accompagne les entreprises à construire une présence en ligne solide :
+            design moderne, performance, SEO, publicité et solutions sur-mesure.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Obtenir un devis gratuit</a>
+            <a class="btn" href="#services">Explorer nos services</a>
+          </div>
+
+          <div class="mini" aria-label="Proof points">
+            <span>✅ <b>Process clair</b> (brief → maquette → dev → livraison)</span>
+            <span>✅ <b>Optimisé</b> (vitesse, SEO, sécurité)</span>
+            <span>✅ <b>Support</b> (maintenance & évolution)</span>
+          </div>
+
+          <div class="explore" aria-label="Défilez pour explorer">
+            <div class="track">
+              <div class="chip"><span class="spark" aria-hidden="true"></span> DÉFILEZ POUR EXPLORER</div>
+              <div class="chip"><span class="spark" aria-hidden="true"></span> SCROLL TO EXPLORE</div>
+              <div class="chip"><span class="spark" aria-hidden="true"></span> مرّر لاكتشاف المزيد</div>
+              <div class="chip"><span class="spark" aria-hidden="true"></span> DÉFILEZ POUR EXPLORER</div>
+              <div class="chip"><span class="spark" aria-hidden="true"></span> SCROLL TO EXPLORE</div>
+              <div class="chip"><span class="spark" aria-hidden="true"></span> مرّر لاكتشاف المزيد</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card hero-side" aria-label="Résumé">
+          <div class="side-box">
+            <div class="side-title">
+              <strong>Ce que vous gagnez</strong>
+              <span>Focus النتائج</span>
+            </div>
+
+            <div class="list">
+              <div class="li">
+                <div class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M20 7L10 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <b>Site سريع</b> وواجهة احترافية تعطي ثقة.
+                </div>
+              </div>
+
+              <div class="li">
+                <div class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M20 7L10 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <b>SEO أساسي</b> + صفحات جاهزة للإشهار.
+                </div>
+              </div>
+
+              <div class="li">
+                <div class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M20 7L10 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <b>صيانة</b> وتحديثات وحماية مستمرة.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-box">
+            <div class="side-title">
+              <strong>Contact rapide</strong>
+              <span>Mayas · Primestack</span>
+            </div>
+            <div class="list">
+              <div class="li">
+                <div class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21s7-4.6 7-11a7 7 0 1 0-14 0c0 6.4 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 10.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div><b>Alger, Algérie</b><br/><span style="color:var(--muted2)">Déplacement / visio</span></div>
+              </div>
+              <div class="li">
+                <div class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div><b>contact@primestack.dz</b><br/><span style="color:var(--muted2)">Remplacez par votre email</span></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Expertise / Stats -->
+  <section id="expertise">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Notre expertise</h2>
+          <p>Une méthode simple, une exécution propre, et des résultats mesurables. On construit “solide”, ثم نكبر معاك.</p>
+        </div>
+      </div>
+
+      <div class="stats" aria-label="Statistiques">
+        <div class="stat">
+          <strong>+10</strong>
+          <span>projets livrés (exemple)</span>
+        </div>
+        <div class="stat">
+          <strong>7j</strong>
+          <span>délais rapides pour un site vitrine</span>
+        </div>
+        <div class="stat">
+          <strong>90+</strong>
+          <span>score perf cible (selon projet)</span>
+        </div>
+        <div class="stat">
+          <strong>Support</strong>
+          <span>maintenance & évolution</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Nos services</h2>
+          <p>Des solutions complètes : création, acquisition, optimisation, puis maintenance. كلش باش تربح الوقت وتطلع النتائج.</p>
+        </div>
+        <a class="btn" href="#contact">Parler du projet</a>
+      </div>
+
+      <div class="grid" aria-label="Services">
+        <div class="service">
+          <div class="badge">🌐 Création de sites web</div>
+          <h3>Sites vitrines & e-commerce</h3>
+          <p>Design moderne, responsive, rapide. Pages pensées pour convertir (CTA, sections, preuves).</p>
+          <div class="more">
+            <span>En savoir plus</span>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 12h8m0 0-3-3m3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="badge">📣 Publicité digitale (Ads)</div>
+          <h3>Google / Meta Ads</h3>
+          <p>Ciblage, tracking, landing pages, optimisation ROI. Campagnes claires + reporting.</p>
+          <div class="more">
+            <span>En savoir plus</span>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 12h8m0 0-3-3m3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="badge">🔎 Référencement (SEO)</div>
+          <h3>SEO technique & contenu</h3>
+          <p>Structure, vitesse, pages, mots-clés, schema. On vise un trafic durable et qualifié.</p>
+          <div class="more">
+            <span>En savoir plus</span>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 12h8m0 0-3-3m3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="badge">🛡️ Sécurité & maintenance</div>
+          <h3>Protection + mises à jour</h3>
+          <p>Sauvegardes, monitoring, correctifs, mises à jour. Votre site reste stable et fiable.</p>
+          <div class="more">
+            <span>En savoir plus</span>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 12h8m0 0-3-3m3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="badge">⚙️ Applications web</div>
+          <h3>Outils sur-mesure</h3>
+          <p>Dashboard, backoffice, portail client, automatisations. Sécurisé et évolutif.</p>
+          <div class="more">
+            <span>En savoir plus</span>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 12h8m0 0-3-3m3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="badge">🧩 Branding & UI</div>
+          <h3>Identité & interfaces</h3>
+          <p>Logo/charte (si besoin), maquettes UI, cohérence visuelle, expérience utilisateur.</p>
+          <div class="more">
+            <span>En savoir plus</span>
+            <span class="arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M8 12h8m0 0-3-3m3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="realisations">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Réalisations</h2>
+          <p>أمثلة (Placeholder) — بدّل الأسماء والروابط بصحّ مشاريعك. الأفضل 6–9 مشاريع مع وصف قصير.</p>
+        </div>
+        <a class="btn" href="#contact">Demander une offre</a>
+      </div>
+
+      <div class="work" aria-label="Réalisations">
+        <a class="work-item" href="#" onclick="return false;">
+          <div>
+            <strong>Projet 01 — Site vitrine</strong>
+            <span>Landing page + formulaire + SEO de base</span>
+          </div>
+          <div class="meta">
+            <span>Algérie</span>
+            <span>Voir →</span>
+          </div>
+        </a>
+
+        <a class="work-item" href="#" onclick="return false;">
+          <div>
+            <strong>Projet 02 — E-commerce</strong>
+            <span>Paiement, catalogue, optimisation vitesse</span>
+          </div>
+          <div class="meta">
+            <span>Retail</span>
+            <span>Voir →</span>
+          </div>
+        </a>
+
+        <a class="work-item" href="#" onclick="return false;">
+          <div>
+            <strong>Projet 03 — SEO local</strong>
+            <span>Pages services + schema + tracking</span>
+          </div>
+          <div class="meta">
+            <span>Local</span>
+            <span>Voir →</span>
+          </div>
+        </a>
+
+        <a class="work-item" href="#" onclick="return false;">
+          <div>
+            <strong>Projet 04 — Ads + landing</strong>
+            <span>Google Ads + landing dédiée + conversion</span>
+          </div>
+          <div class="meta">
+            <span>Acquisition</span>
+            <span>Voir →</span>
+          </div>
+        </a>
+
+        <a class="work-item" href="#" onclick="return false;">
+          <div>
+            <strong>Projet 05 — Web app</strong>
+            <span>Dashboard + gestion utilisateurs + rôles</span>
+          </div>
+          <div class="meta">
+            <span>SaaS</span>
+            <span>Voir →</span>
+          </div>
+        </a>
+
+        <a class="work-item" href="#" onclick="return false;">
+          <div>
+            <strong>Projet 06 — Refonte UI</strong>
+            <span>Design system + صفحات جديدة + تحسين UX</span>
+          </div>
+          <div class="meta">
+            <span>UX/UI</span>
+            <span>Voir →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies -->
+  <section id="technologies">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Technologies</h2>
+          <p>قاعدة تقنية “Solide”: أداء + أمان + قابلية للتطوير. نختار حسب مشروعك وميزانيتك.</p>
+        </div>
+      </div>
+
+      <div class="tech" aria-label="Technologies">
+        <div class="chip2">HTML5</div>
+        <div class="chip2">CSS3</div>
+        <div class="chip2">JavaScript</div>
+        <div class="chip2">React</div>
+        <div class="chip2">Node.js</div>
+        <div class="chip2">WordPress</div>
+        <div class="chip2">SEO</div>
+        <div class="chip2">Google Analytics</div>
+        <div class="chip2">Performance</div>
+        <div class="chip2">Security</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Travaillons ensemble</h2>
+          <p>أنت على كليك باش نبداو. عطينا تفاصيل صغيرة ونردّ عليك بسرعة (Devis واضح ومرحلي).</p>
+        </div>
+      </div>
+
+      <div class="contact" aria-label="Contact">
+        <div class="contact-card">
+          <h3>Coordonnées</h3>
+          <p>بدّل هاد المعلومات بمعلوماتك الحقيقية (إيميل/هاتف/عنوان).</p>
+
+          <div class="info">
+            <div>
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 21s7-4.6 7-11a7 7 0 1 0-14 0c0 6.4 7 11 7 11Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 10.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </span>
+              <div>
+                <b>Alger, Algérie</b><br/>
+                <span style="color:var(--muted2)">Rendez-vous sur place / visio</span>
+              </div>
+            </div>
+
+            <a href="mailto:contact@primestack.dz">
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>contact@primestack.dz</b><br/>
+                <span style="color:var(--muted2)">Cliquez pour envoyer</span>
+              </div>
+            </a>
+
+            <a href="tel:+213000000000">
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6.5 3.5h3l1.5 5-2 1.5c1.2 2.4 3.1 4.3 5.5 5.5l1.5-2 5 1.5v3c0 1-1 2-2 2C10 22 2 14 2 5.5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <b>+213 (0) 00 00 00 00</b><br/>
+                <span style="color:var(--muted2)">Cliquez pour appeler</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>Demande de devis</h3>
+          <p>Remplissez le formulaire. (Démo) — الإرسال هنا يفتح Email عندك.</p>
+
+          <form id="quoteForm">
+            <div class="row">
+              <input name="name" placeholder="Votre nom (Mayas / Client)" required />
+              <input name="email" placeholder="Votre e-mail" type="email" required />
+            </div>
+            <div class="row">
+              <input name="phone" placeholder="Téléphone (optionnel)" />
+              <input name="service" placeholder="Service (Site / SEO / Ads / App…)" />
+            </div>
+            <textarea name="message" placeholder="Décrivez votre projet (objectifs, délai, budget approximatif…)" required></textarea>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Envoyer la demande</button>
+              <a class="btn" href="#services">Voir services</a>
+              <span class="note">Astuce: بدّل البريد والهاتف فوق قبل النشر.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container">
+          <div class="foot">
+            <div>
+              © <span id="year"></span> <b style="color:var(--text)">Primestack</b> — Tous droits réservés.
+            </div>
+            <div>
+              <a href="#services">Services</a><span class="sep">·</span>
+              <a href="#realisations">Réalisations</a><span class="sep">·</span>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const panel = document.getElementById('mobilePanel');
+    hamburger?.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      panel.style.display = expanded ? 'none' : 'block';
+    });
+    panel?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        panel.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Countdown (15:00 demo)
+    let remaining = 15 * 60; // seconds
+    const countdownEl = document.getElementById('countdown');
+    const tick = () => {
+      const m = String(Math.floor(remaining / 60)).padStart(2, '0');
+      const s = String(remaining % 60).padStart(2, '0');
+      if (countdownEl) countdownEl.textContent = `${m}:${s}`;
+      remaining = Math.max(0, remaining - 1);
+      if (remaining === 0) remaining = 15 * 60; // loop (demo)
+    };
+    setInterval(tick, 1000);
+    tick();
+
+    // Form -> mailto (simple demo)
+    const form = document.getElementById('quoteForm');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = (data.get('name') || '').toString().trim();
+      const email = (data.get('email') || '').toString().trim();
+      const phone = (data.get('phone') || '').toString().trim();
+      const service = (data.get('service') || '').toString().trim();
+      const message = (data.get('message') || '').toString().trim();
+
+      const to = 'contact@primestack.dz'; // change this
+      const subject = encodeURIComponent(`Demande de devis — ${service || 'Projet digital'} (${name})`);
+      const body = encodeURIComponent(
+        `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\nService: ${service}\n\nMessage:\n${message}\n`
+      );
+
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      form.reset();
+    });
+  </script>
+</body>
+</html>
